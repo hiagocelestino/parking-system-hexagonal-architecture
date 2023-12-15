@@ -3,9 +3,11 @@ import Checkin from "./Checkin";
 import GetParkedCars from "./GetParkedCars";
 import Checkout from "./Checkout";
 import ParkedCarDatabaseRepository from "./ParkedCarDatabaseRepository";
+import PostgreSQLAdapter from "./PostgreSQLAdapter";
 
 const app = express();
-const ParkedCarRepository = new ParkedCarDatabaseRepository();
+const connection = new PostgreSQLAdapter();
+const ParkedCarRepository = new ParkedCarDatabaseRepository(connection);
 
 app.use(express.json());
 app.post("/checkin", async function (request: Request, response: Response) {
