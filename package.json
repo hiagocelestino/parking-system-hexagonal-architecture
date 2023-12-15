@@ -8,7 +8,7 @@
     "axios": "^1.6.2",
     "express": "^4.18.1",
     "nodemon": "^2.0.18",
-    "pg-promise": "^10.11.1",
+    "pg-promise": "^10.15.4",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
   },
